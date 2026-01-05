@@ -22,21 +22,21 @@ public class Patrimonio {
     }
 
 
-    public int getid(){
+    public int getId(){
         return id;
     }
 
-    void setId(int id){
+    public void setId(int id){
         if(id >= 0){
             this.id=id;
         }
     }
 
-    public String getnome(){
+    public String getNome(){
         return this.nome;
     }
 
-    void setNome(String nome){
+    public void setNome(String nome){
         if(nome != null){
         this.nome= nome;
         }
@@ -45,7 +45,7 @@ public class Patrimonio {
         return this.tipo;
     }
 
-    void setTipo(String tipo){
+    public void setTipo(String tipo){
         if(tipo != null){
         this.tipo= tipo;
         }
@@ -55,7 +55,7 @@ public class Patrimonio {
         return this.numeroSerie;
     }
 
-    void setNumeroSerie(String numeroSerie){
+    public void setNumeroSerie(String numeroSerie){
         if(numeroSerie != null){
         this.numeroSerie= numeroSerie;
         }
