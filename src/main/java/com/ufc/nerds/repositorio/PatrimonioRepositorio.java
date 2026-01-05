@@ -28,7 +28,10 @@ public class PatrimonioRepositorio {
         }
         return null;
     }
-    
+    public void atualizar(String num_serie){
+        Patrimonio temp = buscar(num_serie);
+        temp.setAlocado(true);
+    }
    public List<Patrimonio> listar(){
     return this.listaPatrimonio;
 }

@@ -1,35 +1,28 @@
 package com.ufc.nerds.modelo;
 public class Patrimonio {
     
-    private int id;
     private String nome;
     private String tipo;
     private String numeroSerie;
+    //Estado se refere a condição do patrimonio, se ele esta em boa condição de uso, ou é necessario manutenção/troca.
+    private boolean estado;
+    //Alocação indica se o patrimonio ja foi alocado para alguma sala por exemplo.
+    private boolean alocado;
 
     public Patrimonio(){}
 
     @SuppressWarnings("OverridableMethodCallInConstructor")
-    public Patrimonio(String nome, String tipo, String numeroSerie, int id){
-        setId(id);
+    public Patrimonio(String nome, String tipo, String numeroSerie, boolean  estado, boolean alocado){
         setNome(nome);
         setTipo(tipo);
         setNumeroSerie(numeroSerie);
+        setEstado(estado);
+
     }
     
     @Override
     public String toString(){
-        return this.nome + "\n" + this.tipo + "\n" + this.numeroSerie + "\n" + this.id;
-    }
-
-
-    public int getId(){
-        return id;
-    }
-
-    public void setId(int id){
-        if(id >= 0){
-            this.id=id;
-        }
+        return this.nome + "\n" + this.tipo + "\n" + this.numeroSerie + "\n" + this.estado;
     }
 
     public String getNome(){
@@ -59,5 +52,17 @@ public class Patrimonio {
         if(numeroSerie != null){
         this.numeroSerie= numeroSerie;
         }
+    } 
+    public boolean getEstado(){
+        return this.estado;
+    }
+    public void setEstado(boolean estado){
+        this.estado = false;
+    }
+     public boolean getAlocado(){
+        return this.alocado;
+    }
+    public void setAlocado(boolean alocado){
+        this.alocado = alocado;
     } 
 }

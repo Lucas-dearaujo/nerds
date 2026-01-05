@@ -9,7 +9,7 @@ import com.ufc.nerds.repositorio.PatrimonioRepositorio;
 public class NerdsApplication {
 
 	public static void main(String[] args) {
-		Patrimonio cadeira = new Patrimonio("cadeira" , "mobilia", "330454", 1);
+		Patrimonio cadeira = new Patrimonio("cadeira" , "mobilia", "330454", true, true);
 		PatrimonioRepositorio estoque = new PatrimonioRepositorio();
 		estoque.cadastrar(cadeira);
 		//System.out.println(cadeira);
