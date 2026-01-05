@@ -5,14 +5,12 @@ import java.util.List;
 import com.ufc.nerds.modelo.Patrimonio;
 
 public class PatrimonioRepositorio {
+    @SuppressWarnings("FieldMayBeFinal")
+    
     private List<Patrimonio> listaPatrimonio;
 
     public PatrimonioRepositorio(){
     listaPatrimonio = new ArrayList<>();
-    }
-
-    public List<Patrimonio> getListaPatrimonio(){
-        return this.listaPatrimonio;
     }
 
     public void cadastrar(Patrimonio equipamento){

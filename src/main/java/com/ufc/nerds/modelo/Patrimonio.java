@@ -17,7 +17,7 @@ public class Patrimonio {
     }
     
     @Override
-    public String toString() {
+    public String toString(){
         return this.nome + "\n" + this.tipo + "\n" + this.numeroSerie + "\n" + this.id;
     }
 
