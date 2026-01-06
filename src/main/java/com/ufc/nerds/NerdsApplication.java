@@ -3,7 +3,6 @@ package com.ufc.nerds;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.ufc.nerds.controller.PatrimonioController;
-import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.repositorio.PatrimonioRepositorio;
 import com.ufc.nerds.service.PatrimonioService;
 
@@ -14,17 +13,11 @@ public class NerdsApplication {
 		PatrimonioRepositorio estoque = new PatrimonioRepositorio();
 		PatrimonioService servicos = new PatrimonioService(estoque);
 		PatrimonioController head  = new PatrimonioController(servicos);
-
+		/* 
 		Patrimonio cadeira = new Patrimonio("cadeira" , "mobilia", "330454", true, true);
 		Patrimonio mesa = new Patrimonio("Mesa L", "Mobilia" , "226471" ,true, true );
 		Patrimonio notebook = new Patrimonio("asus" , "tecnologia", "61234" , true, true);
-		
-		servicos.cadastrar(notebook);
-		servicos.cadastrar(cadeira);
-		servicos.cadastrar(mesa);
-
-		servicos.remover("330454");
-		servicos.listar();
+		*/
 		//System.out.println(cadeira);
 		//SpringApplication.run(NerdsApplication.class, args);
 	}

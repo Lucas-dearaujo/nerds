@@ -9,14 +9,14 @@ public class GlobalExceptionHandler {
     //Quando x exception acontecer, chame este metodo.
     @ExceptionHandler(NumeroSerieException.class)
     
-    public ResponseEntity <String> TratamentoNumSerieDuplicado(NumeroSerieException exemplo){
+    public ResponseEntity <String> tratamentoNumSerieDuplicado(NumeroSerieException exemplo){
         return ResponseEntity
             .status(HttpStatus.BAD_REQUEST)
             .body(exemplo.getMessage());
     }
     
     @ExceptionHandler(PatrimonioNaoEncontradoException.class)
-    public ResponseEntity <String> TratamentoPatrimonioNaoEncontrado ( PatrimonioNaoEncontradoException exemplo2){
+    public ResponseEntity <String> tratamentoPatrimonioNaoEncontrado ( PatrimonioNaoEncontradoException exemplo2){
         return ResponseEntity
             .status(HttpStatus.NOT_FOUND)
             .body(exemplo2.getMessage());

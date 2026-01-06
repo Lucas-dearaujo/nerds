@@ -11,7 +11,6 @@ import com.ufc.nerds.repositorio.PatrimonioRepositorio;
 @Service
 public class PatrimonioService {
      
-    @SuppressWarnings("FieldMayBeFinal")
     private PatrimonioRepositorio repositorio;
 
     public PatrimonioService(PatrimonioRepositorio repositorio){
@@ -30,6 +29,12 @@ public class PatrimonioService {
       boolean removido = repositorio.remover(num_serie);
         if(!removido){
             throw new PatrimonioNaoEncontradoException(num_serie);
+        }
+    }
+    public void atualizar(String numeroSerie, Patrimonio patrimonio){
+        boolean atualizado = repositorio.atualizar(numeroSerie, patrimonio);
+        if(!atualizado){
+            throw new PatrimonioNaoEncontradoException(numeroSerie);
         }
     }
     public List <Patrimonio> listar(){

@@ -5,10 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.ufc.nerds.modelo.Patrimonio;
-//Camada de dados, como é feito a manipulação dos dados, basicamentes os end points.
+//Camada de dados, como é feito a manipulação dos dados.
 @Repository
 public class PatrimonioRepositorio {
-    @SuppressWarnings("FieldMayBeFinal")
     
     private List<Patrimonio> listaPatrimonio;
 
@@ -36,17 +35,21 @@ public class PatrimonioRepositorio {
         }
         return null;
     }
-    /*
-    public void atualizar(String num_serie){
-        Patrimonio temp = buscar(num_serie);
-        temp.setAlocado(true);
+    
+    public boolean atualizar(String num_Serie, Patrimonio novosDados){
+     Patrimonio temp = buscar(num_Serie);
+     if(temp != null){
+        temp.setNome(novosDados.getNome());
+        temp.setTipo(novosDados.getTipo());
+        temp.setEstado(novosDados.getEstado());
+        temp.setAlocado(novosDados.getAlocado());
+        return true;
+     }
+     return false;
         
     }
-    */
+    
    public List<Patrimonio> listar(){
-        for(Patrimonio p: listaPatrimonio) {
-            System.out.println(p);
-        }   
     return this.listaPatrimonio;
 }
     

@@ -11,7 +11,6 @@ public class Patrimonio {
 
     public Patrimonio(){}
 
-    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Patrimonio(String nome, String tipo, String numeroSerie, boolean  estado, boolean alocado){
         setNome(nome);
         setTipo(tipo);
@@ -19,12 +18,6 @@ public class Patrimonio {
         setEstado(estado);
         setAlocado(alocado);
     }
-    
-    @Override
-    public String toString(){
-        return this.nome + "\n" + this.tipo + "\n" + this.numeroSerie + "\n" + "Alocado:" + this.alocado + "\n"+ "Condicao:" + this.estado + "\n" + "-------" + "\n";
-    }
-
     public String getNome(){
         return this.nome;
     }
