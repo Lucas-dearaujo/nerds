@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.service.PatrimonioService;
-
+//Camada mais superior em contato direto com htpp, alguem pede algo pela api requesições get post etc, eu me aprofundo nas camadas e retorno algo depois de algo ser feito.
+// Controller -> Service -> Repositorio -> Patrimonio.
 @RestController
 @RequestMapping("/patrimonios")
 

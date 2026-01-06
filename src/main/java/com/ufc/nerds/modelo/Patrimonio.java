@@ -1,12 +1,12 @@
 package com.ufc.nerds.modelo;
 public class Patrimonio {
-    
+    //Classe patrimonio é oque o sistema manipula. aqui tem os  getters, setters dados.
     private String nome;
     private String tipo;
     private String numeroSerie;
     //Estado se refere a condição do patrimonio, se ele esta em boa condição de uso, ou é necessario manutenção/troca.
     private boolean estado;
-    //Alocação indica se o patrimonio ja foi alocado para alguma sala por exemplo.
+    //Alocação indica se o patrimonio ja foi alocado para alguma sala por exemplo, esses comentarios vao pro readmedepois.
     private boolean alocado;
 
     public Patrimonio(){}

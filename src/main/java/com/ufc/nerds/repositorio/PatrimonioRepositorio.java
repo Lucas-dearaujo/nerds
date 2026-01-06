@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.ufc.nerds.modelo.Patrimonio;
-
+//Camada de dados, como é feito a manipulação dos dados, basicamentes os end points.
 @Repository
 public class PatrimonioRepositorio {
     @SuppressWarnings("FieldMayBeFinal")

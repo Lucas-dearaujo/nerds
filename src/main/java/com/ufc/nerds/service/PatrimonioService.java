@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.repositorio.PatrimonioRepositorio;
-
+//Sou a camada do service, aqui eu me preocupo com as regras de negocio e outras validações oque pode ou nao fazer? eu nao me preocupo com htpp.
 @Service
 public class PatrimonioService {
      
