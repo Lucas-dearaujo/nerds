@@ -17,6 +17,7 @@ public class PatrimonioRepositorio {
 
     public void cadastrar(Patrimonio equipamento){
         listaPatrimonio.add(equipamento);
+       
     }
 
     public boolean remover(String num_serie){
@@ -50,7 +51,7 @@ public class PatrimonioRepositorio {
     }
     
    public List<Patrimonio> listar(){
-    return this.listaPatrimonio;
+    return listaPatrimonio;
 }
     
 }

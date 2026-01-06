@@ -14,9 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.service.PatrimonioService;
 
-@RestController //essa classe responde requisições HTTP, retorna JSON automaticamente
-@RequestMapping("/patrimonios") //define a URL base
-// Controller -> Service -> Repositorio -> Patrimonio.
+@RestController //essa classe responde requisições HTTP, retorna JSON automaticamente //define a URL base
+@RequestMapping("/patrimonios")
 public class PatrimonioController {
 
     private PatrimonioService service;
@@ -24,15 +23,13 @@ public class PatrimonioController {
     public PatrimonioController(PatrimonioService service){
         this.service = service;
 }
-
-
 @PostMapping //POST, mapeia
     public void cadastrar(@RequestBody Patrimonio patrimonio){
         service.cadastrar(patrimonio);
-    }   
+    }
 
 
-@GetMapping //GET mapeia
+@GetMapping
     public List<Patrimonio> listar(){
         return service.listar();
     }
@@ -46,7 +43,6 @@ public class PatrimonioController {
     public void atualizar(@PathVariable String numeroSerie, @RequestBody Patrimonio patrimonio) {
     service.atualizar(numeroSerie, patrimonio);
 }
-
 }
 
 

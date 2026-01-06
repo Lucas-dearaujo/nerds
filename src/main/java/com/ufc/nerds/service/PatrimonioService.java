@@ -18,7 +18,7 @@ public class PatrimonioService {
     }
 
     public void cadastrar(Patrimonio patrimonio){
-        if( repositorio.buscar(patrimonio.getNumeroSerie())!= null ){
+        if( repositorio.buscar(patrimonio.getNumeroSerie()) != null ){
             throw new NumeroSerieException(patrimonio.getNumeroSerie());
         }
         else{
