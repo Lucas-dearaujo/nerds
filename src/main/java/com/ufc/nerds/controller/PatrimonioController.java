@@ -2,7 +2,9 @@
 package com.ufc.nerds.controller;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.service.PatrimonioService;
 //Camada mais superior em contato direto com htpp, alguem pede algo pela api requesições get post etc, eu me aprofundo nas camadas e retorno algo depois de algo ser feito.
+@RestController //essa classe responde requisições HTTP, retorna JSON automaticamente
+@RequestMapping("/patrimonios") //define a URL base
 // Controller -> Service -> Repositorio -> Patrimonio.
-@RestController
-@RequestMapping("/patrimonios")
-
 public class PatrimonioController {
 
     @SuppressWarnings("FieldMayBeFinal")
@@ -24,16 +25,27 @@ public class PatrimonioController {
         this.service = service;
 }
 
-@GetMapping
-    public List<Patrimonio> listar(){
-        return service.listar();
-}
 
-@PostMapping
+@PostMapping //POST, mapeia
     public void cadastrar(@RequestBody Patrimonio patrimonio){
         service.cadastrar(patrimonio);
     }   
+
+
+@GetMapping //GET mapeia
+    public List<Patrimonio> listar(){
+        return service.listar();
+    }
+
+@DeleteMapping("/{numeroSerie}")
+    public void remover(@PathVariable String numeroSerie) {
+        service.remover(numeroSerie);
 }
+
+}
+
+
+
 
 
 

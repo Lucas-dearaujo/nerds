@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.ufc.nerds.exception.NumeroSerieException;
+import com.ufc.nerds.exception.PatrimonioNaoEncontradoException;
 import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.repositorio.PatrimonioRepositorio;
 //Sou a camada do service, aqui eu me preocupo com as regras de negocio e outras validações oque pode ou nao fazer? eu nao me preocupo com htpp.
@@ -26,12 +27,9 @@ public class PatrimonioService {
         }
     }
     public void remover(String num_serie){
-        Patrimonio temp = repositorio.buscar(num_serie);
-        if(temp != null){
-            repositorio.remover(temp);
-        }
-        else{
-
+      boolean removido = repositorio.remover(num_serie);
+        if(!removido){
+            throw new PatrimonioNaoEncontradoException(num_serie);
         }
     }
     public List <Patrimonio> listar(){

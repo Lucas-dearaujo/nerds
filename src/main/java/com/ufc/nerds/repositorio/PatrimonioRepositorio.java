@@ -20,8 +20,13 @@ public class PatrimonioRepositorio {
         listaPatrimonio.add(equipamento);
     }
 
-    public void remover(Patrimonio equipamento){
-        listaPatrimonio.remove(equipamento);
+    public boolean remover(String num_serie){
+        Patrimonio temp = buscar(num_serie);
+            if(temp != null){
+                listaPatrimonio.remove(temp);
+                return true;
+        }
+        return false;
     }
     public Patrimonio buscar(String num_serie){
         for(Patrimonio p :listaPatrimonio){
