@@ -8,7 +8,7 @@ Controller → Service → Repositorio → Patrimonio
 
 ---
 
-## 🧱 Arquitetura do Projeto
+## Arquitetura do Projeto
 
 - **Controller**  
   Responsável por receber as requisições HTTP (GET, POST, PUT, DELETE) e se comunicar com o Service.
@@ -42,7 +42,7 @@ Controller → Service → Repositorio → Patrimonio
 
 ---
 
-## ▶️ Como Executar o Projeto
+## Como Executar o Projeto
 
 1. Clone o repositório:
 
