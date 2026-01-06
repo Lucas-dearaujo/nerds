@@ -4,14 +4,14 @@ API REST desenvolvida em Java com Spring Boot para gerenciamento de patrimônios
 
 Controller->Service->Repositorio->patrimonio
 
-*Controller recebe as requisições htpp e se comunica com service
-*Service Contem regras de negocios e lançamentos de exceções.
-*Repositorio manipula os dados e tem as funções a nivel de OO com os objetos.
-*Patrimonio é a camada mais baixa e guarda getter setters e dados.
+Controller recebe as requisições htpp e se comunica com service
+Service Contem regras de negocios e lançamentos de exceções.
+Repositorio manipula os dados e tem as funções a nivel de OO com os objetos.
+Patrimonio é a camada mais baixa e guarda getter setters e dados.
 
-A O pacote exception é responsavel pelas exeções, uma classe trata todos os exeptions: GlobalExeptionHandler para evitar codigo separado.
+O pacote exception é responsavel pelas exeções, uma classe trata todos os exeptions: GlobalExeptionHandler para evitar codigo separado.
 E as demais classes exception cuidam dos throws e mensages de cada erro, neste desafio: nao deixar cadastrar dois patrimonios com mesmo numerodeserie, e um extra que é caso não encontre o numero de serie nos cadastros.
---------------------------------
+
 ##  Tecnologias utilizadas
 - Java 21 (ou a versão que você usou)
 - Spring Boot web (achei que pudesse precisar, acabou não precisando.)
