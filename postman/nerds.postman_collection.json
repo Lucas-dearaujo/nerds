@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "dbc09b3f-72ae-4b9d-b738-1612ac63744c",
+		"name": "nerds",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51284846",
+		"_collection_link": "https://lucas-dearaujo-32e5dc47-623533.postman.co/workspace/Lucas-de-Araujo-Ferreira-Maia's~32e40ff6-989f-47ac-8b0c-8f7d58060090/collection/51284846-dbc09b3f-72ae-4b9d-b738-1612ac63744c?action=share&source=collection_link&creator=51284846"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Cadeira Gamer\",\r\n  \"tipo\": \"Mobilia\",\r\n  \"numeroSerie\": \"111222\",\r\n  \"estado\": true,\r\n  \"alocado\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patrimonios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patrimonios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/patrimonios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patrimonios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Cadeira\",\r\n        \"tipo\": \"Mobilia\",\r\n        \"estado\": true,\r\n        \"alocado\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patrimonios/1127041",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patrimonios",
+						"1127041"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"numeroSerie\": \"1127041\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patrimonios/1127041",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patrimonios",
+						"1127041"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
