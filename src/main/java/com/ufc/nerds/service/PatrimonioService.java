@@ -1,7 +1,12 @@
 package com.ufc.nerds.service;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
 import com.ufc.nerds.modelo.Patrimonio;
 import com.ufc.nerds.repositorio.PatrimonioRepositorio;
 
+@Service
 public class PatrimonioService {
      
     @SuppressWarnings("FieldMayBeFinal")
@@ -18,6 +23,8 @@ public class PatrimonioService {
         else{
             repositorio.cadastrar(patrimonio);
         }
-
+    }
+    public List <Patrimonio> listar(){
+        return repositorio.listar();
     }
 }

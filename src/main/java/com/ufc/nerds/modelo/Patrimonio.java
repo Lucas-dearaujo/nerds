@@ -31,7 +31,7 @@ public class Patrimonio {
 
     public void setNome(String nome){
         if(nome != null){
-        this.nome= nome;
+            this.nome= nome;
         }
     }
    public String getTipo(){
@@ -40,7 +40,7 @@ public class Patrimonio {
 
     public void setTipo(String tipo){
         if(tipo != null){
-        this.tipo= tipo;
+            this.tipo= tipo;
         }
     }
 
@@ -50,7 +50,7 @@ public class Patrimonio {
 
     public void setNumeroSerie(String numeroSerie){
         if(numeroSerie != null){
-        this.numeroSerie= numeroSerie;
+            this.numeroSerie= numeroSerie;
         }
     } 
     public boolean getEstado(){

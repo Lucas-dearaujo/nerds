@@ -2,15 +2,18 @@ package com.ufc.nerds.repositorio;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.ufc.nerds.modelo.Patrimonio;
 
+@Repository
 public class PatrimonioRepositorio {
     @SuppressWarnings("FieldMayBeFinal")
     
     private List<Patrimonio> listaPatrimonio;
 
     public PatrimonioRepositorio(){
-    listaPatrimonio = new ArrayList<>();
+        listaPatrimonio = new ArrayList<>();
     }
 
     public void cadastrar(Patrimonio equipamento){
@@ -28,12 +31,15 @@ public class PatrimonioRepositorio {
         }
         return null;
     }
+    /*
     public void atualizar(String num_serie){
         Patrimonio temp = buscar(num_serie);
         temp.setAlocado(true);
+        
     }
+    */
    public List<Patrimonio> listar(){
-    return this.listaPatrimonio;
+        return this.listaPatrimonio;
 }
     
 }
