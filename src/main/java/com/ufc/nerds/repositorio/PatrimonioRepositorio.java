@@ -39,7 +39,10 @@ public class PatrimonioRepositorio {
     }
     */
    public List<Patrimonio> listar(){
-        return this.listaPatrimonio;
+        for(Patrimonio p: listaPatrimonio) {
+            System.out.println(p);
+        }   
+    return this.listaPatrimonio;
 }
     
 }

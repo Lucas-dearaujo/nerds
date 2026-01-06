@@ -17,12 +17,12 @@ public class Patrimonio {
         setTipo(tipo);
         setNumeroSerie(numeroSerie);
         setEstado(estado);
-
+        setAlocado(alocado);
     }
     
     @Override
     public String toString(){
-        return this.nome + "\n" + this.tipo + "\n" + this.numeroSerie + "\n" + this.estado;
+        return this.nome + "\n" + this.tipo + "\n" + this.numeroSerie + "\n" + "Alocado:" + this.alocado + "\n"+ "Condicao:" + this.estado + "\n" + "-------" + "\n";
     }
 
     public String getNome(){
@@ -57,7 +57,7 @@ public class Patrimonio {
         return this.estado;
     }
     public void setEstado(boolean estado){
-        this.estado = false;
+        this.estado = estado;
     }
      public boolean getAlocado(){
         return this.alocado;
