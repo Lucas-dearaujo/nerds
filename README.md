@@ -100,6 +100,8 @@ Os testes dos endpoints foram realizados utilizando o Postman.
 A coleção do Postman está disponível no repositório para facilitar os testes dos endpoints.
 
 Adendos:
+Esse git foi a segunda tentativa por que o primeiro repositorio deu problema em varios aspectos de mudança, entao eu achei melhor fazer outro do zero, entao tem bem mais que 19 commits. talvez 30 uma vez que o 1º commit ja tem a maioria dos pacotes.
+
 Nesse desafio eu fiz
 - Criação de endpoints REST (GET, POST, PUT e DELETE)
 - Separação de responsabilidades entre camadas
@@ -109,5 +111,3 @@ Nesse desafio eu fiz
 
 O projeto não utiliza banco de dados, trabalhando com armazenamento em memória, focando
 no entendimento da arquitetura REST e do fluxo de uma aplicação backend com Spring Boot, eu tive um conhecimento bem superficial, porem mesmo com isso consegui com esforço aplicar uma tentativa boa e mesmo se errar ou tiver fugido da ideia de algum ponto , foi um desafio interessante. e agradeço a oportunidade.
-
-
